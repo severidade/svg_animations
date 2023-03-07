@@ -45,13 +45,36 @@
 
   <h1>Path</h1>
   <svg>
-
     <path
       stroke="#000"
       stroke-width="3"
       fill="none"
       d="M40,20 L40,80 A30,30 0 0,0 100,100z"
     />
+  </svg>
+
+  <h1>Elementos containers</h1>
+  <h2>defs</h2>
+  <svg>
+    <defs>
+      <circle id="meu_circulo" r="25" cx="150" cy="50"/>
+    </defs>
+
+    <use xlink:href="#meu_circulo"/>
+    <use xlink:href="#meu_circulo" x="80" fill="violet"/>
+  </svg>
+
+  <h2>Group</h2>
+  <svg>
+    <defs>
+      <circle id="circulo2" r="25" cx="150" cy="50"/>
+    </defs>
+
+   <g fill="red">
+     <use xlink:href="#circulo2" x="50"/>
+     <use xlink:href="#circulo2" x="0"/>
+     <use xlink:href="#meu_circulo" x="-60"/>
+   </g>
   </svg>
 
   <style>
